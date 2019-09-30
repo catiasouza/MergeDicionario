@@ -8,7 +8,8 @@ var alunos = [
     "Catia": "IOS",
     "Amanda": "Java",
     "Gabriel": "C#",
-    "Mariana": "Node JS"
+    "Mariana": "Node JS",
+    "Äna": "C"
 ]
 let novosAlunos = [
     "Ricardo": "Android",
@@ -37,3 +38,34 @@ alunos.merge(novosAlunos) { (alunos, _) -> String in  //QD NOMEIA O PRIMEIRO PAR
     alunos
 }
 print(alunos)
+print()
+print("===== GROUP TRADICIONAL =====")
+print()
+//AGRUPAR USANDO A INICIAL
+
+
+//var dicionarioDeNomes: [String: [String]] = [:]
+
+//for aluno in alunos{
+//    if let caracter = aluno.key.first{
+//        let prefixo = String(caracter)     //TRANSFORMANDO CARACTERE EM STRING
+//        if var listaDeNomes = dicionarioDeNomes[prefixo] {     //ACRESCENTAR TODOS VALORES DA LISTA
+//            listaDeNomes.append(aluno.key)
+//            dicionarioDeNomes[prefixo] = listaDeNomes
+//        }else{
+//             dicionarioDeNomes[prefixo] = [aluno.key]
+//
+//        }
+//
+//    }
+//}
+//print(dicionarioDeNomes)
+//print(alunos)
+
+print()
+print("===== GROUP COM MELHORIAS =====")
+print()
+
+let dicionarioDeNomes = Dictionary(grouping: alunos.keys,by: {$0.prefix(1)   } ) //O NUM E A QTD DE CARACTERES QUE QUERO AGRUPAR
+print(dicionarioDeNomes)
+
