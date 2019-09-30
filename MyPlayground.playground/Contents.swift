@@ -67,5 +67,18 @@ print("===== GROUP COM MELHORIAS =====")
 print()
 
 let dicionarioDeNomes = Dictionary(grouping: alunos.keys,by: {$0.prefix(1)   } ) //O NUM E A QTD DE CARACTERES QUE QUERO AGRUPAR
-print(dicionarioDeNomes)
+//print(dicionarioDeNomes)
 
+print()
+print("===== COMPARACAO DE DICIONARIOS =====")
+print()
+
+let  alunosAlgoritmos = ["Amanda": 7, "Adriano": 10, "Bianca": 9, "Felipe": 7,"Mateus": 10]
+
+let  alunosMatematica = ["Amanda": nil, "Adriano": 7, "Bianca": 8, "Felipe": 8,"Mateus": 5]
+
+print(alunosAlgoritmos == alunosMatematica)
+
+print()
+print("===== COMPARACAO DE DICIONARIOS =====")
+print()
